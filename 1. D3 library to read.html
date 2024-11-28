@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple D3 JSON Example</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <h1>D3 JSON Example</h1>
+  <div id="output"></div>
+  <script>
+    // Fetch and display the JSON data
+    d3.json("https://static.bc-edx.com/data/dla-1-2/m14/lms/starter/samples.json").then(data => {
+      document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+    });
+  </script>
+</body>
+</html>
